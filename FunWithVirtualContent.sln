@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunWithVirtualContent", "FunWithVirtualContent\FunWithVirtualContent.csproj", "{6AC32DAB-8BDF-4A9F-86BA-1310DB75EE59}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunWithVirtualContent.Logic", "FunWithVirtualContent.Logic\FunWithVirtualContent.Logic.csproj", "{96DEAA17-C44F-4C30-BDCD-658389103510}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{6AC32DAB-8BDF-4A9F-86BA-1310DB75EE59}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6AC32DAB-8BDF-4A9F-86BA-1310DB75EE59}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6AC32DAB-8BDF-4A9F-86BA-1310DB75EE59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96DEAA17-C44F-4C30-BDCD-658389103510}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96DEAA17-C44F-4C30-BDCD-658389103510}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96DEAA17-C44F-4C30-BDCD-658389103510}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96DEAA17-C44F-4C30-BDCD-658389103510}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
