@@ -3,7 +3,7 @@
 An example using the mystical `UmbracoVirtualNodeByIdRouteHandler` and a custom `UrlProvider`
 ## 
 
-**Notice: This is only a POC and is full of holes and potential issues**
+**Notice: This is only a POC and is full of holes and potential issues, if you want to make it better please get in contact**
 
 ## The problem and node structure ##
 
