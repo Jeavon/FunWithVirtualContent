@@ -134,6 +134,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="Our.Umbraco.Vorto">
+      <HintPath>..\packages\Our.Umbraco.Vorto.1.4\lib\Our.Umbraco.Vorto.dll</HintPath>
+    </Reference>
     <Reference Include="Semver">
       <HintPath>..\packages\semver.1.1.2\lib\net45\Semver.dll</HintPath>
     </Reference>
@@ -418,6 +421,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Fruit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Plugins\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

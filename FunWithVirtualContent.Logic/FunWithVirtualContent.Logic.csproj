@@ -119,6 +119,9 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="Our.Umbraco.Vorto">
+      <HintPath>..\packages\Our.Umbraco.Vorto.1.4\lib\Our.Umbraco.Vorto.dll</HintPath>
+    </Reference>
     <Reference Include="Owin">
       <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
     </Reference>
@@ -230,6 +233,7 @@
   <ItemGroup>
     <Compile Include="FruitsController.cs" />
     <Compile Include="FruitsRouteHandler.cs" />
+    <Compile Include="FruitBoxUrlProvider.cs" />
     <Compile Include="UmbracoEvents.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
