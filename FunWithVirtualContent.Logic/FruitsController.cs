@@ -13,11 +13,11 @@ namespace FunWithVirtualContent.Logic
     using Umbraco.Web.Models;
     using Umbraco.Web.Mvc;
 
-    public class MyProductController : RenderMvcController
+    public class FruitsController : RenderMvcController
     {
-        public ActionResult Product(RenderModel model, string sku)
+        public ActionResult Fruit(RenderModel model, string slug)
         {
-            if (string.IsNullOrEmpty(sku))
+            if (string.IsNullOrEmpty(slug))
             {
                 return null;
             }
@@ -25,14 +25,15 @@ namespace FunWithVirtualContent.Logic
             {
                 foreach (var node in model.Content.Children)
                 {
-                    if (node.UrlName == sku)
+                    if (node.UrlName == slug)
                     {
-                        return this.View("~/Views/Fruit.cshtml", this.CreateRenderModel(node));
-                        //match
+                        // match
+                        return this.View("~/Views/Fruit.cshtml", this.CreateRenderModel(node));                        
                     }
                 }
 
-                return null;
+                return this.HttpNotFound();
+
                 //return RenderProduct(model, sku);
             }
         }
@@ -42,7 +43,7 @@ namespace FunWithVirtualContent.Logic
             var model = new RenderModel(content, CultureInfo.CurrentUICulture);
 
             //add an umbraco data token so the umbraco view engine executes
-            RouteData.DataTokens["umbraco"] = model;
+            this.RouteData.DataTokens["umbraco"] = model;
 
             return model;
         }

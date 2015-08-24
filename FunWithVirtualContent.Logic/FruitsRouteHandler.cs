@@ -8,9 +8,9 @@ namespace FunWithVirtualContent.Logic
 {
     using Umbraco.Web.Mvc;
 
-    public class ProductsRouteHandler : UmbracoVirtualNodeByIdRouteHandler
+    public class FruitsRouteHandler : UmbracoVirtualNodeByIdRouteHandler
     {
-        public ProductsRouteHandler(int realNodeId)
+        public FruitsRouteHandler(int realNodeId)
             : base(realNodeId)
         {
         }

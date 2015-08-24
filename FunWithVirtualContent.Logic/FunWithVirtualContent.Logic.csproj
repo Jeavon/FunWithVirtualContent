@@ -228,8 +228,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MyProductController.cs" />
-    <Compile Include="ProductsRouteHandler.cs" />
+    <Compile Include="FruitsController.cs" />
+    <Compile Include="FruitsRouteHandler.cs" />
     <Compile Include="UmbracoEvents.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

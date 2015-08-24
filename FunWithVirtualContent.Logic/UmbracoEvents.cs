@@ -11,15 +11,15 @@
         protected override void ApplicationStarted(UmbracoApplicationBase umbracoApplication, ApplicationContext applicationContext)
         {
             RouteTable.Routes.MapUmbracoRoute(
-            "test",
-            "Box/{sku}",
+            "MarketToBox",
+            "Box/{slug}",
             new
             {
-                controller = "MyProduct",
-                action = "Product",
-                sku = UrlParameter.Optional
+                controller = "Fruits",
+                action = "Fruit",
+                slug = UrlParameter.Optional
             },
-            new ProductsRouteHandler(1055));
+            new FruitsRouteHandler(1055));
         }
     }
 }
