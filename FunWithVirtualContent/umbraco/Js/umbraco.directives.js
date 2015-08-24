@@ -1101,7 +1101,7 @@ angular.module("umbraco.directives")
 
                     //stop watching now
                     tabWatch();
-                });
+                }, 200);
                 
             });
         }

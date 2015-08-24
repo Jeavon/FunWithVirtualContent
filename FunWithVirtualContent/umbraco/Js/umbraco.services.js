@@ -706,18 +706,19 @@ angular.module('umbraco.services')
 
                 _.each(assets, function (asset) {
                     LazyLoad.js(appendRnd(asset.path), function () {
+                        asset.state = "loaded";
                         if (!scope) {
-                            asset.state = "loaded";
                             asset.deferred.resolve(true);
-                        } else {
-                            asset.state = "loaded";
+                        }
+                        else {
                             angularHelper.safeApply(scope, function () {
                                 asset.deferred.resolve(true);
                             });
                         }
                     });
                 });
-            } else {
+            }
+            else {
                 //return and resolve
                 var deferred = $q.defer();
                 promise = deferred.promise;
@@ -788,6 +789,12 @@ function contentEditingHelper(fileManager, $q, $location, $routeParams, notifica
                             err: err,
                             rebindCallback: self.reBindChangedProperties(args.content, err.data)
                         });
+                        //show any notifications
+                        if (angular.isArray(err.data.notifications)) {
+                            for (var i = 0; i < err.data.notifications.length; i++) {
+                                notificationsService.showNotification(err.data.notifications[i]);
+                            }
+                        }
                         args.scope.busy = false;
                         deferred.reject(err);
                     });
@@ -1199,13 +1206,13 @@ function contentEditingHelper(fileManager, $q, $location, $routeParams, notifica
          * @description
          * Changes the location to be editing the newly created content after create was successful.
          * We need to decide if we need to redirect to edito mode or if we will remain in create mode. 
-         * We will only need to maintain create mode if we have not fulfilled the basic requirements for creating an entity which is at least having a name.
+         * We will only need to maintain create mode if we have not fulfilled the basic requirements for creating an entity which is at least having a name and ID
          */
         redirectToCreatedContent: function (id, modelState) {
 
             //only continue if we are currently in create mode and if there is no 'Name' modelstate errors
             // since we need at least a name to create content.
-            if ($routeParams.create && (!modelState || !modelState["Name"])) {
+            if ($routeParams.create && (id > 0 && (!modelState || !modelState["Name"]))) {
 
                 //need to change the location to not be in 'create' mode. Currently the route will be something like:
                 // /belle/#/content/edit/1234?doctype=newsArticle&create=true

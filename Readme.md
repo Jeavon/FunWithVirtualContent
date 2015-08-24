@@ -1,4 +1,4 @@
-# Umbraco - routing 1:1 repository content with language specific content #
+# Umbraco - routing Vorto 1:1 repository content with language specific content #
 
 An example using the mystical `UmbracoVirtualNodeByIdRouteHandler` and a custom `UrlProvider`
 ## 
@@ -9,25 +9,25 @@ An example using the mystical `UmbracoVirtualNodeByIdRouteHandler` and a custom 
 
 A library of fruits (I've no idea why I chose fruit, something to do with organic fruit/veg boxes going in my head) that have 1:1 content using Vorto. Also language specific sites, we would like the fruits to render as virtual children of the box node in each languages site, we need the urls to be multi-lingual.
 
-![](docs/images/structure.jpg)
+![](https://raw.githubusercontent.com/Jeavon/FunWithVirtualContent/master/Docs/Images/structure.jpg)
 
 ## Vorto ##
 
 Determine a Vorto property to use to generate urls from, `FruitName`
 
-![](docs/images/vorto.jpg)
+![](https://raw.githubusercontent.com/Jeavon/FunWithVirtualContent/master/Docs/Images/vorto.jpg)
 
 ## Url Provider ##
 
 Finds urls and returns them to the node in the backoffice so that links are correct and so that usage of `.Url` is correct
 
-![](docs/images/urlprovider.jpg)
+![](https://raw.githubusercontent.com/Jeavon/FunWithVirtualContent/master/Docs/Images/urlprovider.jpg)
 
 ## The result ##
 
 Same node renders as if it was child within each Box page in the correct language and using the url generated from the Vorto property
 
-![](docs/images/result.jpg)
+![](https://raw.githubusercontent.com/Jeavon/FunWithVirtualContent/master/Docs/Images/result.jpg)
 
 ## The files ##
 
