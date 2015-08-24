@@ -14,6 +14,8 @@
 
     public class UmbracoEvents : ApplicationEventHandler
     {
+        private const int MarketLibraryNodeId = 1055;
+
         protected override void ApplicationStarted(UmbracoApplicationBase umbracoApplication, ApplicationContext applicationContext)
         {
 
@@ -37,7 +39,7 @@
                             action = "Fruit",
                             slug = UrlParameter.Optional
                         },
-                        new FruitsRouteHandler(1055));
+                        new FruitsRouteHandler(MarketLibraryNodeId));
                     }
                 }
             }
